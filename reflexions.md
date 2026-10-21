@@ -34,4 +34,22 @@
 > reasoning now, before you run anything.
 >
 
-5)je dirais Athènes quelque chose comme ça
+5)je dirais Madrid quelque chose comme ça
+
+> **Reflection — was your prediction right?** Compare the real top-ranked capital
+> to what you predicted in Stage 3. If they match, what does that tell you about how
+> well you understood the 50/50 formula? If they don't match, what surprised you —
+> was it the weather data, the distance, or the formula itself?
+
+6) C'est bien en accord avec ce que j'avais dis
+
+> **Reflection — monitoring (CM4):** GitHub automatically disables a scheduled
+> workflow after 60 days with no repository activity — a real, documented behavior,
+> not a bug. If this dashboard's schedule silently stopped running (or started
+> silently failing every week), what is the *one* thing on the live public page a
+> visitor could look at to notice something was wrong, without checking the Actions
+> tab? Is that signal good enough on its own, or would you add something?
+
+7) Le signal visible sur la page est la ligne en bas : « Data last updated 2026-10-21T… ». Si le workflow s'arrête, cette date cesse d'avancer. Un visiteur qui voit une date vieille de plusieurs semaines peut comprendre que les données ne sont plus à jour.
+De plus il est tout petit, pas visible en gris
+On pourrait ajouter une alerte si les datas n'ont pas été update depuis plus de 7 jours.
