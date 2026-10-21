@@ -53,3 +53,15 @@
 7) Le signal visible sur la page est la ligne en bas : « Data last updated 2026-10-21T… ». Si le workflow s'arrête, cette date cesse d'avancer. Un visiteur qui voit une date vieille de plusieurs semaines peut comprendre que les données ne sont plus à jour.
 De plus il est tout petit, pas visible en gris
 On pourrait ajouter une alerte si les datas n'ont pas été update depuis plus de 7 jours.
+
+> **Reflection — the unguided step:** which file(s) did you change, and why were
+> those the right place(s) to change? And separately: is the "best" destination an
+> absolute fact about these 26 capitals, or does it depend on where you start from?
+> Compare your own top result to a classmate's (different origin city) if you can —
+> did you get the same recommended capital?
+
+8) scripts/fetch_and_score.py : c'est là que la ville de départ est définie, avec les coordonnées et l'exclusion. Elle intervient dans le calcul de la distance, donc du CO₂ et du score final. docs/index.html : le nom « Paris » était écrit en dur dans le texte affiché. Plutôt que de le remplacer à la main, le script écrit maintenant "origin" dans rankings.json et la page le lit. Le nom de la ville n'est donc défini qu'à un seul endroit. Si on change d'origine, il suffit de modifier le script, et la page suit automatiquement.
+Partie 2 : la « meilleure » destination est-elle absolue ?
+Non, elle dépend du point de départ :
+Le score final n'est donc pas une propriété de la ville. C'est une mesure relative, qui dépend de l'utilisateur et de son point de départ.
+Capitale gagnante est la même mais la deuxième a changé
